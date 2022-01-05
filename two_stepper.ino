@@ -42,29 +42,23 @@ void loop() {
   {
     stepper1.move(50);
     stepper2.move(50);
-    //cycle++;
   }
 
   if (buttonpush2 == 0 && mode == 0) //綠色校正
   {
     stepper1.move(-50);
     stepper2.move(-50);
-    //cycle++;
   }
   if (buttonpush1 == 0 && down_or_top == 0 && mode == 1) //下降
   {
     stepper1.moveTo(6000);
     stepper2.moveTo(6000);
     down_or_top = 1;
-    
-    //cycle++;
   }
   if (buttonpush2 == 0 && down_or_top == 1 && mode == 1) //上升
   {
     stepper1.moveTo(0);
     stepper2.moveTo(0);
     down_or_top = 0;
-      
-    // cycle--;
   }
 }
